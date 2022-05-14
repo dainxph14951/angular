@@ -20,9 +20,12 @@
         <td>{{products.price}}</td>
         <td>{{products.status ? "còn Hàng": "Hết hàng"}}</td>
         <td><Button class="btn btn-danger" (click)="onHandeleRemove(products.id)">Remove</Button></td>
-        <td><Button class="btn btn-warning">Edit</Button></td>
+        <td><Button class="btn btn-warning" (click)="onHandeleEdit(products)">Edit</Button></td>
     </tr>
     </tbody>
   </table>
+  <div *ngIf="productsDetail">
+        <app-products-detail [products]="productsDetail"></app-products-detail>
+  </div>
 </div>
 
