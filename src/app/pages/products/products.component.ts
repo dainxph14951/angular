@@ -1,31 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Iproducts } from 'src/app/models/products.models';
+import { ProductsService } from 'src/app/services/products.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  productsDetail! : Iproducts
-  isStatus: boolean = false;
-  nameInput: string = "";
-  productList: Iproducts[]= [
-    {id:1, name: 'Products A', price: 500, status: true},
-    {id:2, name: 'Products B', price: 600, status: false},
-    {id:3, name: 'Products C', price: 800, status: true},
-  ]
-  constructor() { }
+  products!: Iproducts[]
+  constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
+    // chạy
+    this.getProductList();
   }
-  onhandleClick(){
-    this.isStatus = !this.isStatus
-  }
-  onHandeleRemove(id: number){
-    this.productList = this.productList.filter(products => products.id !== id )
-  }
-  onHandeleEdit(products: Iproducts) {
-    console.log(1);
-    this.productsDetail = products;
-  }
-}
+    // khai báo
+    getProductList() {
+      this.productService.getProductList().subscribe(data => {
+        this.products = data;
+      })
+    }
+  onHandRemove(id : any) {
+    const confirm = window.confirm('Bạn có muốn xóa không ?') 
+    if(confirm){
+      this.productService.removeProduct(id).subscribe(() => {
+        // reRender
+        this.products = this.products.filter(item => item.id !== id);
+    });
+  } }}
