@@ -1,16 +1,22 @@
 {
   "products": [
     {
-      "id": 2,
+      "id": 3,
       "name": "Product C",
+      "img": "",
+      "quantity": 10,
       "price": 300,
+      "desc": "aaaaaaaaaaaaaaaaaa",
       "status": true
     },
     {
-      "id": 3,
-      "name": "Product C",
-      "price": 300,
-      "status": true
+      "name": "aaa",
+      "img": "abc.jbg",
+      "quantity": 1,
+      "status": true,
+      "price": 3,
+      "desc": "abc",
+      "id": 4
     }
   ]
 }

@@ -6,23 +6,45 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductsDetailComponent } from './pages/products-detail/products-detail/products-detail.component';
-import { ProductAddComponent } from './pages/products-add/product-add/product-add.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './pages/home/home/home.component';
+import { NodeFoundComponent } from './pages/node-found/node-found/node-found.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeadersComponent } from './pages/headers/headers.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { FooterComponent } from './pages/footer/footer.component';
+import { ListProductsComponent } from './components/products/list-products/list-products.component';
+import { AddProductsComponent } from './components/products/add-products/add-products.component';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     ProductsDetailComponent,
-    ProductAddComponent
+    HomeComponent,
+    NodeFoundComponent,
+    HeadersComponent,
+    HeaderComponent,
+    FooterComponent,
+    ListProductsComponent,
+    AddProductsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NzMenuModule
   ],
-  providers: [],
+  providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

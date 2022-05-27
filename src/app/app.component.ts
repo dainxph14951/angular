@@ -10,9 +10,9 @@ import data from './data';
 })
 export class AppComponent {
   title = 'my-app';
-  productList: Iproducts[]= data;
-  onHandleAdd(product: any) {
-    console.log(product);
-    this.productList.push(product);
-  }
+  // productList: Iproducts[]= data;
+  // onHandleAdd(product: any) {
+  //   console.log(product);
+  //   this.productList.push(product);
+  // }
 }
