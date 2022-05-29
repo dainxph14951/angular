@@ -28,6 +28,7 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzTransferModule } from 'ng-zorro-antd/transfer';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 // registerLocaleData(en);
 
 @NgModule({
@@ -58,6 +59,7 @@ import { NzFormModule } from 'ng-zorro-antd/form';
     NzButtonModule,
     NzTransferModule,
     NzFormModule,
+    NzLayoutModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
