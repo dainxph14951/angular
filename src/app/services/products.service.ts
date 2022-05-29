@@ -25,6 +25,6 @@ URL_API = `http://localhost:3000/products`
     return this.http.post<Iproducts>(`${this.URL_API}`, product);
   }
   updateProduct(product: Iproducts){
-    return this.http.put<Iproducts>(`http://localhost:3000/products`, product);
+    return this.http.put<Iproducts>(`${this.URL_API}/${product.id}`, product)
   }
 }

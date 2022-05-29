@@ -1,5 +1,5 @@
 <form (ngSubmit)="onSubmit()" #formAdd="ngForm">
-    <input
+    <!-- <input
       type="text"
       placeholder="Name"
       [(ngModel)]="product.name"
@@ -23,11 +23,52 @@
       [(ngModel)]="product.price"
       name="price"
     />
-        <input
+        <input 
       type="text"
       placeholder="Desc"
       [(ngModel)]="product.desc"
       name="Desc"
-    />
-    <button>Add</button>
+    /> -->
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>Name</nz-form-label>
+      <nz-form-control [nzSpan]="12"  >
+        <input nz-input type="text" [(ngModel)]="product.name"  name="name" placeholder="name" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>Img</nz-form-label>
+      <nz-form-control [nzSpan]="12"  >
+        <input nz-input type="text" [(ngModel)]="product.img"  name="img" placeholder="img" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>quantity</nz-form-label>
+      <nz-form-control [nzSpan]="12"  >
+        <input nz-input type="number" [(ngModel)]="product.quantity"  name="quantity" placeholder="quantity" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>Price</nz-form-label>
+      <nz-form-control [nzSpan]="12"  >
+        <input nz-input type="number" [(ngModel)]="product.price"  name="price" placeholder="price" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>Comments</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzErrorTip="Please write something here!">
+        <textarea  nz-input rows="2"  [(ngModel)]="product.desc"  name="Desc" placeholder="write any thing"></textarea>
+      </nz-form-control>
+    </nz-form-item>
+
+
+    <nz-form-item>
+      <nz-form-control [nzOffset]="7" [nzSpan]="12">
+        <button nz-button nzType="primary" >Submit</button>
+        <button nz-button >Reset</button>
+      </nz-form-control>
+    </nz-form-item>
+    <!-- <button>Add</button> -->
   </form>
+  

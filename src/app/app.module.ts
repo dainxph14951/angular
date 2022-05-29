@@ -20,8 +20,15 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { FooterComponent } from './pages/footer/footer.component';
 import { ListProductsComponent } from './components/products/list-products/list-products.component';
 import { AddProductsComponent } from './components/products/add-products/add-products.component';
-
-registerLocaleData(en);
+import { NzImageModule } from 'ng-zorro-antd/image';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NewsComponent } from './pages/news/news.component';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzTransferModule } from 'ng-zorro-antd/transfer';
+import { NzFormModule } from 'ng-zorro-antd/form';
+// registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -35,6 +42,7 @@ registerLocaleData(en);
     FooterComponent,
     ListProductsComponent,
     AddProductsComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,14 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzMenuModule
+    NzMenuModule,
+    NzImageModule,
+    NzCardModule,
+    NzListModule,
+    NzTypographyModule,
+    NzButtonModule,
+    NzTransferModule,
+    NzFormModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
