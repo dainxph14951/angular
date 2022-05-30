@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { elementAt } from 'rxjs';
+import { HeaderComponent } from './components/header/header.component';
 import { AddProductsComponent } from './components/products/add-products/add-products.component';
 import { ListProductsComponent } from './components/products/list-products/list-products.component';
 import { HomeComponent } from './pages/home/home/home.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: "", component: HomeComponent, pathMatch: 'full' },
   {path:'admin/products', component: ListProductsComponent },
   {path:'news', component: NewsComponent},
-  // {path:'products', component: ProductsComponent },
+  {path:'products', component: ProductsComponent },
+  {path:'header', component: HeaderComponent },
   {path:'admin/products/add', component: AddProductsComponent },
   {path:'products/:id', component: ProductsDetailComponent },
   { path: "admin/products/edit/:id", component: AddProductsComponent },

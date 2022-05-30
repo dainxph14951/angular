@@ -35,10 +35,13 @@ export class AddProductsComponent implements OnInit {
         // call services edit product
         // nếu thành công thì trả về sản phẩm vừa cập nhật xong
         this.productService.updateProduct(this.product).subscribe(data => console.log(data))
+        alert('edit thành công')
+        this.router.navigateByUrl('admin/products');
       } else {
         // call service add product
         this.productService.addProduct(this.product).subscribe(data => {
           // chuyển hướng router
+          alert(' thêm thành công')
           this.router.navigateByUrl('admin/products');
         })
       }
