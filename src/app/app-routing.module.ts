@@ -5,6 +5,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { AddProductsComponent } from './components/products/add-products/add-products.component';
 import { ListProductsComponent } from './components/products/list-products/list-products.component';
 import { HomeComponent } from './pages/home/home/home.component';
+import { SigninComponent } from './pages/login/signin/signin.component';
+import { SignupComponent } from './pages/login/signup/signup.component';
 import { NewsComponent } from './pages/news/news.component';
 import { NodeFoundComponent } from './pages/node-found/node-found/node-found.component';
 import { ProductsDetailComponent } from './pages/products-detail/products-detail/products-detail.component';
@@ -14,6 +16,10 @@ const routes: Routes = [
   { path: "", component: HomeComponent, pathMatch: 'full' },
   {path:'admin/products', component: ListProductsComponent },
   {path:'news', component: NewsComponent},
+
+  {path:'signup', component: SignupComponent},
+  {path:'signin', component: SigninComponent},
+  
   {path:'products', component: ProductsComponent },
   {path:'header', component: HeaderComponent },
   {path:'admin/products/add', component: AddProductsComponent },

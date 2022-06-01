@@ -30,6 +30,8 @@ import { NzTransferModule } from 'ng-zorro-antd/transfer';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { SignupComponent } from './pages/login/signup/signup.component';
+import { SigninComponent } from './pages/login/signin/signin.component';
 // registerLocaleData(en);
 
 @NgModule({
@@ -45,6 +47,8 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
     ListProductsComponent,
     AddProductsComponent,
     NewsComponent,
+    SignupComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,

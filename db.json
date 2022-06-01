@@ -45,5 +45,13 @@
       "desc": "High-top canvas sneakers in green. Round rubber cap toe. Lace-up closure in white.",
       "id": 5
     }
+  ],
+  "users": [
+    {
+      "email": "xuandai300092@gmail.com",
+      "password": "$2a$10$dgwvHjgQHpEKjcoit74ggeqwaHhNeq/XiD.WfzV9ki7olhWE00.TO",
+      "name": "Đại Nguyễn",
+      "id": 1
+    }
   ]
 }

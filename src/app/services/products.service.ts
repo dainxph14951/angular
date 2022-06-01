@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
-import data from '../data';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http'
 import { Iproducts } from '../models/products.models';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductsService {
 URL_API = `http://localhost:3000/products`
   constructor(
     private http: HttpClient
   ) { }
+  
   getProduct(id: any): Observable<Iproducts> {
     // return data.find(item => item.id == id)
     return this.http.get<Iproducts>(`${this.URL_API}/${id}`);
