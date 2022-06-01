@@ -14,4 +14,7 @@ export class UsersService {
   addUser(user: Iuser): Observable<Iuser> {
     return this.http.post<Iuser>(`${this.URL_API}`, user);
   }
+  signin(user: Iuser): Observable<Iuser> {
+    return this.http.post<Iuser>(`http://localhost:3000/signin`, user);
+  }
 }
